@@ -6,30 +6,31 @@ orbitType: string;
 type: string;
 operational: boolean;
 launchDate: string;
-shouldShowWarning: Function;
+// shouldShowWarning: Function;
 constructor(name: string, type: string, launchDate: string, orbitType: string, operational: boolean){
     this.name = name;
     this.orbitType = orbitType;
     this.type = type;
     this.operational = operational;
     this.launchDate = launchDate;
-    this.shouldShowWarning = function():boolean{
+    // this.shouldShowWarning = Function;
+    //function():boolean{
+    //     if(this.type.toLowerCase()==='space debris'){
+    //         return true
+    //     }
+    //     else{
+    //         return false
+    //     }
+    // }
+    console.log(this.shouldShowWarning(this.type));
+    }
+    shouldShowWarning: Function = function(): boolean{
         if(this.type.toLowerCase()==='space debris'){
             return true
         }
         else{
             return false
         }
-    }
-    console.log(this.shouldShowWarning(this.type));
-    }
-//     shouldShowWarning():boolean{
-//     if(this.type.toLowerCase()==='space debris'){
-//         return true
-//         }
-//         else{
-//             return false
-//         }
-// }
+    };
 
 }

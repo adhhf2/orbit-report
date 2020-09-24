@@ -8,7 +8,7 @@ import { Satellite } from '../satellite';
 })
 export class OrbitListComponent implements OnInit {
   @Input() satellites: Satellite[];
-  shouldShowWarning: boolean
+  //shouldShowWarning: boolean
   // warning: string = '#da8a8a';
   constructor() { }
 
